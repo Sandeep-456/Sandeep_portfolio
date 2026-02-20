@@ -63,14 +63,31 @@ function About({}) {
       {/* 1. Introduction Section */}
       <section className="animate-in fade-in duration-700">
         <p
-          className={`leading-relaxed text-base font-medium ${isDark ? "text-zinc-400" : "text-zinc-500"}`}
+          className={`leading-relaxed text-base mb-3 font-medium ${isDark ? "text-zinc-400" : "text-zinc-500"}`}
         >
-          I am a{" "}
-          <span className="text-blue-500">Junior Full Stack Developer</span> at
-          Aspire Next. I specialize in building full-scale web applications
-          using the MERN stack, focusing on creating seamless user experiences
-          and robust backends. My goal is to transform complex problems into
-          elegant, functional digital solutions.
+          I’m a{" "}
+          <span className="text-blue-500">Junior Full Stack Developer</span> who
+          enjoys the puzzle of building complex, reliable web applications. With
+          a B.Tech background and a deep love for the MERN stack, I specialize
+          in making different technologies talk to each other—whether that's
+          integrating AI facial recognition for secure exams or syncing
+          real-time payments through Razorpay.
+        </p>
+        <p
+          className={`leading-relaxed mb-3 text-base font-medium ${isDark ? "text-zinc-400" : "text-zinc-500"}`}
+        >
+          I’m equally passionate about the "how it works" and the "how it
+          looks." I’ve moved from building robust backends with Node.js and
+          MySQL/MongoDB to designing tactile, modern interfaces using
+          Claymorphism and Framer Motion. My goal is always the same: to create
+          secure, high-performance tools that are actually a joy for people to
+          use.
+        </p>
+        <p
+          className={`leading-relaxed mb-3 text-base font-medium ${isDark ? "text-zinc-400" : "text-zinc-500"}`}
+        >
+          I thrive in collaborative environments and love turning a difficult
+          technical challenge into a seamless user experience.
         </p>
       </section>
 
