@@ -58,6 +58,12 @@ function About({}) {
     },
   ];
 
+  const handleurlCardClick = (url) => {
+    if (url && url !== "#") {
+      window.open(url, "_blank");
+    }
+  };
+
   return (
     <div className="space-y-12 pb-10">
       {/* 1. Introduction Section */}
@@ -182,29 +188,32 @@ function About({}) {
         <h3
           className={`text-lg font-bold mb-6 ${isDark ? "text-white" : "text-zinc-800"}`}
         >
-          What Mentors Say
+          Testimonials
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
             {
               quote:
                 "Sandeep is a dedicated developer with a strong grasp of full-stack integration.",
-              author: "Team Lead @ Aspire Next",
+              author: "Amarnath",
+              link: "https://www.linkedin.com/in/amarnathracha/",
             },
             {
               quote:
                 "Quick learner who consistently delivers high-quality React components.",
-              author: "Senior Dev @ Aspire Next",
+              author: "Sai Ram",
+              link: "https://www.linkedin.com/in/sairam-kolavennu-746598219/",
             },
           ].map((t, idx) => (
             <div
               key={idx}
-              className={`p-6 rounded-[1.5rem] border
+              className={`p-6 cursor-pointer hover:scale-102 transition-all duration-500 rounded-[1.5rem] border
                 ${
                   isDark ?
                     "bg-[#111] border-zinc-800 shadow-[6px_6px_15px_rgba(0,0,0,0.4)]"
                   : "bg-white border-slate-100 shadow-[6px_6px_15px_#e2e8f0]"
                 }`}
+              onClick={() => handleurlCardClick(t.link)}
             >
               <p
                 className={`text-sm italic mb-4 ${isDark ? "text-zinc-400" : "text-zinc-500"}`}

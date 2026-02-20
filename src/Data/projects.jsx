@@ -305,7 +305,7 @@ export const projectsData = [
     title: "Corporate Identity & Program Hub",
     category: "Enterprise Web",
     type: "Professional Company Project",
-    img: "https://res.cloudinary.com/dpvrtbqxt/image/upload/v1771521504/Screenshot_2026-02-19_224655_sugy4l.png",
+    img: "https://res.cloudinary.com/dpvrtbqxt/image/upload/v1771521504/Sandeep/Portfolio/Screenshot_2026-02-19_224655_sugy4l.png",
     // github: "private", // Mark as private for company projects
     live: "https://company-link.com",
     tags: ["React", "MongoDB", "Tailwind", "Framer Motion"],
@@ -325,10 +325,10 @@ export const projectsData = [
       },
     ],
     images: [
-      "https://res.cloudinary.com/dpvrtbqxt/image/upload/v1771521504/Screenshot_2026-02-19_224655_sugy4l.png",
-      "https://res.cloudinary.com/dpvrtbqxt/image/upload/v1771521505/Screenshot_2026-02-19_224721_htw39r.png",
-      "https://res.cloudinary.com/dpvrtbqxt/image/upload/v1771521506/Screenshot_2026-02-19_224734_uzatl3.png",
-      "https://res.cloudinary.com/dpvrtbqxt/image/upload/v1771521507/Screenshot_2026-02-19_224748_o8jq5f.png",
+      "https://res.cloudinary.com/dpvrtbqxt/image/upload/v1771521504/Sandeep/Portfolio/Screenshot_2026-02-19_224655_sugy4l.png",
+      "https://res.cloudinary.com/dpvrtbqxt/image/upload/v1771521505/Sandeep/Portfolio/Screenshot_2026-02-19_224721_htw39r.png",
+      "https://res.cloudinary.com/dpvrtbqxt/image/upload/v1771521506/Sandeep/Portfolio/Screenshot_2026-02-19_224734_uzatl3.png",
+      "https://res.cloudinary.com/dpvrtbqxt/image/upload/v1771521507/Sandeep/Portfolio/Screenshot_2026-02-19_224748_o8jq5f.png",
     ],
   },
   {

@@ -19,6 +19,15 @@ function Profile() {
     },
   ];
 
+  const socialMediaIcons = [
+    { id: 0, icon: <FaGithub />, link: "https://github.com/Sandeep-456" },
+    {
+      id: 1,
+      icon: <FaLinkedin />,
+      link: "https://www.linkedin.com/in/sandeepindugula",
+    },
+  ];
+
   return (
     <div className="h-full w-full transition-transform duration-500">
       <div
@@ -99,20 +108,23 @@ function Profile() {
         />
         {/* Social Buttons with depth */}
         <div className="flex justify-center gap-6 mt-10">
-          {[<FaGithub />, <FaLinkedin />].map((icon, i) => (
-            <a
-              key={i}
-              href="#"
-              className={`p-3 rounded-xl text-xl transition-all active:shadow-inner hover:-translate-y-1
+          {socialMediaIcons.map((item) => {
+            return (
+              <a
+                key={item.i}
+                href={item.link}
+                target="_blank"
+                className={`p-3 rounded-xl text-xl transition-all active:shadow-inner hover:-translate-y-1
               ${
                 isDark ?
                   "bg-[#1a1a1a] border-zinc-800 text-white shadow-[6px_6px_12px_#000]"
                 : "bg-white border-slate-100 text-slate-900 shadow-[6px_6px_12px_#cbd5e1]"
               }`}
-            >
-              {icon}
-            </a>
-          ))}
+              >
+                {item.icon}
+              </a>
+            );
+          })}
         </div>
       </div>
     </div>
