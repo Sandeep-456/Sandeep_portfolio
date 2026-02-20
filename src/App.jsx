@@ -4,7 +4,7 @@ import Certifications from "./pages/Certifications";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import Resume from "./pages/Resume";
-import Layout from "./UI/Layout";
+import Layout from "./ui/Layout";
 import Error from "./pages/Error";
 import NotFound from "./pages/NotFound";
 import ProjectDetails from "./pages/ProjectDetails";
