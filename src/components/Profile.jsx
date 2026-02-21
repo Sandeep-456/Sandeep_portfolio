@@ -3,22 +3,46 @@ import { Mail, Phone, MapPin, ChevronDown, ChevronUp } from "lucide-react"; // A
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiChip } from "react-icons/hi";
 import { useTheme } from "../Context/ThemeContext";
+import { FaRegCopy } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa6";
 
 function Profile() {
   const { isDark } = useTheme();
+  const [copied, setCopied] = useState(false);
   const [isOpen, setIsOpen] = useState(false); // State for mobile toggle
+
+  const handleItemClick = (item) => {
+    if (item.action === "copy") {
+      // Your existing copy logic
+      navigator.clipboard.writeText(item.value);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } else if (item.action === "link") {
+      // Opens WhatsApp or Maps in a new tab
+      window.open(item.link, "_blank", "noopener,noreferrer");
+    }
+  };
 
   const contactItems = [
     {
       icon: <Mail size={18} />,
       label: "Email",
       value: "sandeepindugula456@gmail.com",
+      action: "copy",
     },
-    { icon: <Phone size={18} />, label: "Phone", value: "+91 7075103361" },
+    {
+      icon: <Phone size={18} />,
+      label: "Phone",
+      value: "+91 7075103361",
+      link: "https://wa.me/917075103361",
+      action: "link",
+    },
     {
       icon: <MapPin size={18} />,
       label: "Location",
       value: "Hyderabad, India",
+      link: "https://www.google.com/maps/search/?api=1&query=Hyderabad,India",
+      action: "link",
     },
   ];
 
@@ -98,11 +122,19 @@ function Profile() {
           <hr
             className={`mt-4 border ${isDark ? "border-gray-700" : "border-gray-100"}`}
           />
-
+          {copied && (
+            <div
+              className={`fixed flex items-center left-70 -translate-x-1/2 z-[200] px-2 py-1 ${isDark ? "bg-[#222]" : "bg-white"} text-xs font-bold rounded-full shadow-lg animate-in fade-in slide-in-from-top-4 duration-300`}
+            >
+              <p>Copied</p>
+              <FaCheck size={12} className="inline-block ml-1 text-green-500" />
+            </div>
+          )}
           <div className="mt-4 space-y-3">
             {contactItems.map((item, idx) => (
               <div
                 key={idx}
+                onClick={() => handleItemClick(item)}
                 className={`flex items-center gap-4 p-4 rounded-2xl border transition-all hover:translate-x-1
                 ${isDark ? "bg-[#111] border-zinc-800 shadow-[4px_4px_8px_#000]" : "bg-white border-slate-50 shadow-[4px_4px_10px_#e2e8f0]"}`}
               >
@@ -114,8 +146,14 @@ function Profile() {
                     {item.label}
                   </p>
                   <p
-                    className={`text-xs font-bold truncate ${isDark ? "text-zinc-300" : "text-slate-700"}`}
+                    className={`text-xs flex items-center font-bold truncate ${isDark ? "text-zinc-300" : "text-slate-700"}`}
                   >
+                    {item.isCopyable && (
+                      <FaRegCopy
+                        size={8}
+                        className={`mt-1 mr-1 ${isDark ? "text-neutral-500" : "text-gray-400"}`}
+                      />
+                    )}
                     {item.value}
                   </p>
                 </div>

@@ -14,6 +14,7 @@ import {
 } from "react-icons/si";
 import { FaBootstrap } from "react-icons/fa";
 import { useTheme } from "../Context/ThemeContext";
+import { TbFileDownload } from "react-icons/tb";
 
 function Resume() {
   const { isDark } = useTheme();
@@ -99,15 +100,26 @@ function Resume() {
       {/* 1. EDUCATION WITH SIDE TIMELINE */}
       <div className="space-y-12">
         <section>
-          <div className="flex items-center gap-3 mb-10">
-            <MdSchool className="text-blue-500 text-3xl" />
-            <h2
-              className={`text-2xl font-black uppercase tracking-widest ${isDark ? "text-white" : "text-zinc-900"}`}
-            >
-              Education
-            </h2>
+          <div className="flex  justify-between">
+            <div className="flex items-center gap-3 mb-10">
+              <MdSchool className="text-blue-500 text-3xl" />
+              <h2
+                className={`text-2xl font-black uppercase tracking-widest ${isDark ? "text-white" : "text-zinc-900"}`}
+              >
+                Education
+              </h2>
+            </div>
+            <div>
+              <a
+                href="https://drive.google.com/uc?export=download&id=1GuXkxWCoBwucbSBz4K9qJuuX02juoLNb"
+                download="Sandeep_Indugula_Resume.pdf"
+                className="inline-flex items-center gap-2 cursor-pointer text-blue-600 hover:text-blue-700 font-semibold transition-all active:scale-95"
+              >
+                <TbFileDownload size={24} />
+                <span>Download Resume</span>
+              </a>
+            </div>
           </div>
-
           <div className="relative border-l-4 border-blue-500/20 ml-4 space-y-10">
             {education.map((item, i) => (
               <div key={i} className="relative pl-10 group">
@@ -191,37 +203,44 @@ function Resume() {
           <h2
             className={`text-2xl font-black uppercase tracking-widest ${isDark ? "text-white" : "text-zinc-900"}`}
           >
-            Skill Proficiency
+            Technical Stack
           </h2>
         </div>
 
-        <div
-          className={`p-10 rounded-[2.5rem] border-2 space-y-8
-          ${isDark ? "bg-[#0f172a] border-zinc-800" : "bg-[#f1f5f9] border-zinc-100"}`}
-        >
+        {/* Responsive Grid Layout */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {skills.map((skill, i) => (
-            <div key={i} className="space-y-3">
-              <div className="flex justify-between items-center">
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">{skill.icon}</span>
-                  <span
-                    className={`text-xs font-black uppercase tracking-widest ${isDark ? "text-zinc-300" : "text-zinc-700"}`}
-                  >
-                    {skill.name}
-                  </span>
-                </div>
-                <span className="text-xs font-black text-blue-500">
-                  {skill.level}%
-                </span>
-              </div>
+            <div
+              key={i}
+              className={`group relative flex flex-col items-center justify-center p-6 rounded-2xl border transition-all duration-300 hover:-translate-y-2
+        ${
+          isDark ?
+            "bg-[#111] border-zinc-800 shadow-[8px_8px_16px_rgba(0,0,0,0.5)] hover:border-blue-500/50"
+          : "bg-white border-zinc-300 shadow-[8px_8px_20px_#e2e8f0] hover:border-blue-400"
+        }`}
+            >
+              {/* Animated Background Glow (Dark Mode only) */}
+              {isDark && (
+                <div className="absolute inset-0 rounded-2xl bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+              )}
+
+              {/* Logo Container */}
               <div
-                className={`h-2.5 w-full rounded-full overflow-hidden p-[1px] ${isDark ? "bg-black" : "bg-white border border-zinc-200"}`}
+                className={`text-4xl mb-3 transition-transform duration-300 group-hover:scale-110`}
               >
-                <div
-                  className="h-full rounded-full bg-blue-600 shadow-[0_0_10px_rgba(37,99,235,0.4)] transition-all duration-1000 ease-out"
-                  style={{ width: `${skill.level}%` }}
-                />
+                {skill.icon}
               </div>
+
+              {/* Skill Name */}
+              <span
+                className={`text-[10px] font-black uppercase tracking-widest text-center ${
+                  isDark ?
+                    "text-zinc-400 group-hover:text-white"
+                  : "text-zinc-600 group-hover:text-zinc-900"
+                }`}
+              >
+                {skill.name}
+              </span>
             </div>
           ))}
         </div>

@@ -37,7 +37,7 @@ const Certifications = () => {
     {
       title: "Python",
       img: Python,
-      issuer: "NextWave",
+      issuer: "NxtWave",
       desc: "Learned core programming concepts, data structures, and problem-solving logic using Python.",
       techs: ["Python 3", "Logic Building", "Data Structures"],
     },
@@ -79,7 +79,7 @@ const Certifications = () => {
     {
       title: "Developer Foundations",
       img: DeveloperFoundations,
-      issuer: "NextWave",
+      issuer: "NxtWave",
       desc: "Understood Google's best practices for software development, cloud basics, and version control.",
       techs: ["Cloud Basics", "Dev Best Practices", "Google Cloud"],
     },
