@@ -44,12 +44,12 @@ function Profile() {
         {/* Toggle Button - Only visible on Mobile */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`md:hidden absolute top-0 right-0 p-2 rounded-bl-xl rounded-tr-4xl border transition-all active:scale-95
+          className={`md:hidden absolute top-0 right-0 p-2 rounded-bl-3xl rounded-tr-2xl border transition-all active:scale-95
           ${isDark ? "bg-[#222] border-zinc-700 text-blue-400" : "bg-white border-slate-200 text-blue-600 shadow-sm"}`}
         >
           {isOpen ?
             <ChevronUp size={20} />
-          : <ChevronDown size={20} />}
+          : <ChevronDown size={20} className="animate-bounce" />}
         </button>
 
         <div className="mb-2 flex justify-between">
@@ -78,7 +78,7 @@ function Profile() {
             </h2>
 
             <div
-              className={`mt-4 px-6 py-2 rounded-2xl lg:text-[8px] xl:text-[10px] font-black uppercase tracking-[0.2em]
+              className={`mt-4 px-6 py-2 rounded-2xl text-[10px] lg:text-[8px] xl:text-[10px] font-black uppercase tracking-[0.2em]
             ${isDark ? "bg-[#222] text-blue-400 border border-zinc-800" : "bg-white text-blue-600 shadow-md border border-slate-100"}`}
             >
               Full Stack Developer
