@@ -68,7 +68,7 @@ function Layout() {
         {/* Right Section (Navigation + Content Card) */}
         <Card
           isDark={isDark}
-          className={`flex flex-col lg:w-[75%] min-h-[500px] lg:h-[89vh] border-2 mb-24 lg:mb-0 ${isDark ? "border-zinc-800" : "border-white"}`}
+          className={`flex flex-col lg:w-[75%] min-h-[500px] lg:h-[89vh] border-2 mb-24 lg:mb-0 ${isDark ? "border-zinc-800" : "border-white "}`}
         >
           {/* Header & Desktop Nav */}
           <div className="flex justify-between items-start h-fit relative border-b border-transparent">

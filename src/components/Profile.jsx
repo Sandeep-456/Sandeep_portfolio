@@ -62,7 +62,7 @@ function Profile() {
         ${
           isDark ?
             "bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border-zinc-800 shadow-[15px_15px_35px_rgba(0,0,0,0.8)]"
-          : "bg-gradient-to-br from-[#ffffff] to-[#f1f5f9] border-white shadow-[15px_15px_35px_#cbd5e1]"
+          : "bg-gradient-to-br from-[#ffffff] to-[#f1f5f9] border-white shadow-[0px_0px_25px_#cbd5e1]"
         }`}
       >
         {/* Toggle Button - Only visible on Mobile */}

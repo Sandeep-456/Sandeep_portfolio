@@ -32,7 +32,7 @@ export const projectsData = [
     img: "https://res.cloudinary.com/dpvrtbqxt/image/upload/v1771520080/Sandeep/Portfolio/Screenshot_2026-02-19_221618_fnasrb.png",
     // github: "private",
     // live: "https://lms.aspirenext.com",
-    tags: ["React", "Firebase OTP", "Claymorphism", "MongoDB"],
+    tags: ["React", "Firebase", "Claymorphism", "MongoDB"],
     description:
       "A comprehensive, batch-based Learning Management System featuring a custom Claymorphism UI design. I engineered a sophisticated content-locking system and a dynamic roadmap engine that synchronizes live classes, assignments, and quizzes. The platform manages multi-batch data architecture, ensuring a personalized learning journey for every student through secure Firebase authentication and real-time backend scheduling.",
     techs: [
@@ -115,7 +115,7 @@ export const projectsData = [
     img: "https://res.cloudinary.com/dpvrtbqxt/image/upload/v1771595128/Sandeep/Portfolio/Screenshot_2026-02-20_191145_gsrtmi.png",
     // github: "private",
     // live: "#",
-    tags: ["face-api.js", "MongoDB", "Security", "AI"],
+    tags: ["MongoDB", "Security", "face-api.js", "AI"],
     description:
       "An advanced proctoring application that utilizes face-api.js for continuous identity verification and behavior monitoring. Features a full browser lockdown system to prevent cheating, a segmented dashboard for different educational tiers, and a randomized test engine. This project showcases the intersection of web security and browser-based Machine Learning.",
     techs: [

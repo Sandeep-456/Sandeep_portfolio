@@ -43,7 +43,7 @@ const ProjectDetails = () => {
 
   return (
     <div
-      className={`min-h-screen py-16 md:py-10 px-4 md:px-10 lg:px-20 animate-in fade-in duration-500 transition-colors duration-700
+      className={`min-h-screen py-16 md:py-10 px-4 lg:px-14 animate-in fade-in duration-500 transition-colors duration-700
         ${isDark ? "bg-[radial-gradient(circle_at_top_left,_#1a1a1a_0%,_#000000_100%)]" : "bg-[linear-gradient(135deg,_#f8fafc_0%,_#e2e8f0_100%)]"}`}
     >
       {/* Fixed Theme Toggle for Mobile/Desktop */}
@@ -63,7 +63,7 @@ const ProjectDetails = () => {
         </button>
       </div>
 
-      <div className="max-w-6xl mx-auto space-y-6">
+      <div className="w-full mx-auto space-y-6">
         {/* Master Card */}
         <div
           className={`relative rounded-3xl md:rounded-4xl py-6 md:py-10 border transition-all duration-500 overflow-hidden
@@ -80,7 +80,7 @@ const ProjectDetails = () => {
             ${isDark ? "text-zinc-200 hover:text-blue-400" : "text-zinc-400 hover:text-blue-600"}`}
           >
             <IoIosArrowBack size={18} />{" "}
-            <span className="hidden sm:inline">Back to Projects</span>
+            <span className="hidden sm:inline">Back </span>
             <span className="sm:hidden">Back</span>
           </button>
 
