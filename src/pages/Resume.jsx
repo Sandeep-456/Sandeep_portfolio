@@ -113,9 +113,9 @@ function Resume() {
               <a
                 href="https://drive.google.com/uc?export=download&id=1GuXkxWCoBwucbSBz4K9qJuuX02juoLNb"
                 download="Sandeep_Indugula_Resume.pdf"
-                className="inline-flex items-center gap-2 cursor-pointer text-blue-600 hover:text-blue-700 font-semibold transition-all active:scale-95"
+                className="inline-flex items-center text-[8px] md:text-[13px] gap-2 cursor-pointer text-blue-600 hover:text-blue-700 font-semibold transition-all active:scale-95"
               >
-                <TbFileDownload size={24} />
+                <TbFileDownload className="text-[12px] md:text-[17px]" />
                 <span>Download Resume</span>
               </a>
             </div>
