@@ -46,7 +46,7 @@ function Contact() {
     <div className="flex flex-col gap-8 pt-5 pb-10 max-w-4xl mx-auto">
       {/* 1. Visual Header Section - Replace with Lottie later */}
       <div
-        className={`w-full rounded-4xl p-8 border overflow-hidden flex flex-col md:flex-row items-center gap-8 transition-all
+        className={`w-full rounded-2xl lg:rounded-4xl p-8 border overflow-hidden flex flex-col md:flex-row items-center gap-8 transition-all
         ${
           isDark ?
             "bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border-zinc-800 shadow-[10px_10px_30px_#000]"
@@ -84,7 +84,7 @@ function Contact() {
 
       {/* 2. Contact Form - Solid Plate */}
       <div
-        className={`p-10 rounded-4xl border transition-all
+        className={`p-5 lg:p-10 rounded-2xl lg:rounded-4xl border transition-all
         ${
           isDark ?
             "bg-[#0d0d0d] border-zinc-900 shadow-[15px_15px_35px_#000]"

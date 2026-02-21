@@ -2,10 +2,9 @@ function Card({ children, className = "", isDark }) {
   return (
     <div
       className={`
-        relative 
-        rounded-4xl
+        rounded-2xl
+        lg:rounded-4xl
         transition-all 
-        w-full
         duration-700 
 
         ${

@@ -8,7 +8,7 @@ function Portfolio() {
   const navigate = useNavigate();
 
   return (
-    <div className="pb-10 pt-5">
+    <div className="pb-10 pt-5 ">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-8">
         {projectsData.map((project, idx) => (
           <div
