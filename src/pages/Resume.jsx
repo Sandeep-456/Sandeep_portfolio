@@ -15,6 +15,7 @@ import {
 import { FaBootstrap } from "react-icons/fa";
 import { useTheme } from "../Context/ThemeContext";
 import { TbFileDownload } from "react-icons/tb";
+import { RiNextjsFill } from "react-icons/ri";
 
 function Resume() {
   const { isDark } = useTheme();
@@ -92,6 +93,11 @@ function Resume() {
       name: "MongoDB",
       level: 80,
       icon: <SiMongodb className="text-emerald-500" />,
+    },
+    {
+      name: "Next.js",
+      level: 75,
+      icon: <RiNextjsFill className="text-gray-800" />,
     },
   ];
 
